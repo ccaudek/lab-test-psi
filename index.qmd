@@ -1,0 +1,30 @@
+---
+engine: knitr
+---
+
+
+## Benvenuti {.unnumbered}
+
+Questo sito web è dedicato al materiale didattico dell'insegnamento di [Laboratorio di Testing Psicologico](https://unifi.coursecatalogue.cineca.it/insegnamenti/2024/39598_B267-23-23_119717/2023/39598/3252?coorte=2023) (A.A. 2024/2025), rivolto agli studenti del secondo anno del Corso di Laurea Magistrale [PSICOLOGIA CLINICA E DELLA SALUTE E NEUROPSICOLOGIA](https://unifi.coursecatalogue.cineca.it/corsi/2024/3252?annoOrdinamento=2023) dell'[Università degli Studi di Firenze](https://www.unifi.it/).
+
+Questo laboratorio, rivolto agli studenti di laurea magistrale, si focalizza sulle competenze teorico-pratiche per la costruzione e validazione di un reattivo psicometrico. Il corso consisterà in una serie di esercitazioni pratiche utilizzando il software open source R per l'analisi dei dati.
+
+## Informazioni sull'insegnamento {.unnumbered}
+
+- **Codice**: B033300 - LABORATORIO DI TESTING PSICOLOGICO </br>
+- **Corso di laurea**: Laurea Magistrale: PSICOLOGIA CLINICA E DELLA SALUTE E NEUROPSICOLOGIA </br>
+- **Anno Accademico**: 2024-2025 </br>
+- **Calendario**: Il corso si terrà dal 3 marzo al 31 maggio 2025.</br>
+- **Orario delle lezioni**: Le lezioni si svolgeranno il lunedì e il martedì dalle 8:30 alle 10:30 e il giovedì dalle 11:30 alle 13:30.</br>
+- **Luogo**: Gli incontri si terranno presso il Plesso didattico La Torretta.</br>
+- **Modalità di svolgimento della didattica**: Le esercitazioni saranno svolte in modalità frontale.</br>
+
+::: {.callout-note}
+Il presente sito web costituisce l'unica fonte ufficiale da consultare per ottenere informazioni sul programma dell'insegnamento B033300 - LABORATORIO DI TESTING PSICOLOGICO, A.A. 2024-2025, e sulle modalità d'esame.
+:::
+
+## Syllabus
+
+Il Syllabus può essere scaricato utilizzando questo [link](syllabus/syllabus.pdf).
+
+\mainmatter

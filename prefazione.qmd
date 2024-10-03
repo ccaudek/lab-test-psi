@@ -1,0 +1,4 @@
+# Prefazione {.unnumbered}
+
+Gli studenti impareranno a utilizzare il software R per l'analisi dei dati psicometrici e a svolgere l'analisi descrittiva degli item di un reattivo psicometrico. Saranno in grado di valutare la coerenza e la formazione di scale unidimensionali o multidimensionali e applicheranno concetti di algebra lineare nelle analisi psicometriche. Inoltre, determineranno il numero ottimale di dimensioni e la struttura di un test psicometrico, valuteranno l'affidabilità delle scale e l'associazione degli item con il punteggio totale. Utilizzeranno modelli di equazioni strutturali (SEM) per la validazione dei costrutti e svilupperanno e presenteranno progetti sulla validazione di reattivi psicometrici.
+

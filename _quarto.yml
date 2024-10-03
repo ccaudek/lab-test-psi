@@ -1,0 +1,76 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "Laboratorio di Testing Psicologico"
+  subtitle: ""
+  author: "Corrado Caudek"
+  date: "last-modified"
+  search: true
+  cover-image: figures/icon_course.png
+  repo-url: https://github.com/ccaudek/lab-test-psi/
+  repo-actions: [edit]
+  site-url: https://ccaudek.github.io/lab-test-psi/intro.html
+  page-footer:
+    left: |
+      Laboratorio di Testing Psicologico è stato scritto da Corrado Caudek.
+    right: |
+      Questo libro è stato realizzato con <a href="https://quarto.org/">Quarto</a>.
+  sidebar:
+    collapse-level: 1
+    pinned: true
+
+  chapters:
+    - index.qmd
+
+    - prefazione.qmd
+
+    - part: "Modulo 1"
+      chapters:
+        - units/unit_1/01_intro_r.qmd
+        - units/unit_1/hw1a.qmd
+        - units/unit_1/hw1b.qmd
+        - units/unit_1/02_descriptive_stats.qmd
+        - units/unit_1/hw2a.qmd
+
+    - part: "Modulo 2"
+      chapters:
+        - units/unit_2/01_mokken.qmd
+
+    - 99-references.qmd
+
+  appendices:
+    - units/appendix/a01_sum_notation.ipynb
+
+    - part: "Soluzioni degli esercizi"
+      chapters:
+        - units/appendix/solutions_probability.ipynb
+
+crossref:
+  appendix-title: "Appendice"
+
+bibliography: ./references.bib
+
+lang: it
+
+format:
+  html:
+    theme:
+      - cosmo
+      - r4ds.scss
+    code-link: true
+
+    author-meta: "Corrado Caudek"
+    callout-appearance: simple
+
+editor: visual
+
+website:
+  cookie-consent:
+    type: express
+    style: headline
+    palette: dark
+  google-analytics:
+    tracking-id: "G-TP2WLBPMS6"
+    anonymize-ip: true
