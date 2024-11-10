@@ -15,7 +15,7 @@ Questo laboratorio, rivolto agli studenti di laurea magistrale, si focalizza sul
 - **Corso di laurea**: Laurea Magistrale: PSICOLOGIA CLINICA E DELLA SALUTE E NEUROPSICOLOGIA </br>
 - **Anno Accademico**: 2024-2025 </br>
 - **Calendario**: Il corso si terrà dal 3 marzo al 31 maggio 2025.</br>
-- **Orario delle lezioni**: Le lezioni si svolgeranno il lunedì e il martedì dalle 8:30 alle 10:30 e il giovedì dalle 11:30 alle 13:30.</br>
+- **Orario delle lezioni**: Le lezioni si svolgeranno il lunedì dalle 10:30 alle 13:30 e il giovedì dalle 14:30 alle 17:30.</br>
 - **Luogo**: Gli incontri si terranno presso il Plesso didattico La Torretta.</br>
 - **Modalità di svolgimento della didattica**: Le esercitazioni saranno svolte in modalità frontale.</br>
 

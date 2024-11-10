@@ -6,6 +6,22 @@ format:
     code-tools: true
 ---
 
+Si rileggano i capitoli 
+
+- EDA/Le fasi del progetto di analisi dei dati, 
+- EDA/Flusso di lavoro per la pulizia dei dati, 
+- EDA/Data tidying 
+
+della dispensa di [Psicometria](https://ccaudek.github.io/psicometria/). Si applichino le procedure descritte al dataset FAI. Lo scopo è quello di generare:
+
+1. il datset finale,
+2. il dizionario dei dati.
+
+Questi due file andranno consegnati su Moodle.
+
+---
+
+Esaminiamo qui alcuni degli aspetti del flusso di lavoro richiesto.
 
 La prima fase della selezione degli item e validazione di un questionario riguarda le statistiche descrittive degli item. Nella prima fase dell'analisi, @dima2018scale propone di esaminare gli aspetti seguenti.
 

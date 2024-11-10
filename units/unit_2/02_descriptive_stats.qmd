@@ -6,7 +6,22 @@ format:
     code-tools: true
 ---
 
+**Prerequisiti**
+
+- Leggere [Exploratory Data Analysis](https://ccaudek.github.io/psicometria/chapters/eda/introduction_eda.html). Prestare particolare attenzione ai capitoli *Le fasi del progetto di analisi dei dati*, *Flusso di lavoro per la pulizia dei dati*, e *Data tidying*.
+
+**Concetti e competenze chiave**
+
+**Preparazione del notebook**
+
+```{r}
+# Carica il file _common.R per impostazioni di pacchetti e opzioni
+here::here("code", "_common.R") |> source()
+```
+
 [UNDER CONSTRUCTION]
+
+## Introduzione
 
 In questa sessione, inizieremo ad affrontare la sequenza di operazioni necessarie per la validazione di un reattivo psicologico, come descritto da:
 
@@ -19,17 +34,6 @@ Il primo passo riguarda le statistiche descrittive, che sarà l'argomento princi
 - Esame delle correlazioni negative tra gli item.
 - Rilevazione di rispondenti con pattern di risposta insoliti.
 
-## Preparazione del notebook
-
-```{r}
-suppressPackageStartupMessages({
-    library(tidyverse)
-    library(here)
-    library(rio)
-})
-
-options(max.print = 1000000)
-```
 
 ## Strategie di Coping per Genitori con Figli Oncologici
 
