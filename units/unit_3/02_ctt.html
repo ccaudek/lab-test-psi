@@ -1,0 +1,1547 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it" xml:lang="it"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Corrado Caudek">
+
+<title>10&nbsp; Teoria Classica dei Test – Laboratorio di Testing Psicologico</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../units/unit_4/01_assignment_04.html" rel="next">
+<link href="../../units/unit_3/01_assignment_03.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Nessun risultato",
+    "search-matching-documents-text": "documenti trovati",
+    "search-copy-link-title": "Copiare il link nella ricerca",
+    "search-hide-matches-text": "Nascondere i risultati aggiuntivi",
+    "search-more-match-text": "ci sono altri risultati in questo documento",
+    "search-more-matches-text": "ulteriori risultati in questo documento",
+    "search-clear-button-title": "Pulire",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancellare",
+    "search-submit-button-title": "Inviare",
+    "search-label": "Ricerca"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Attiva/disattiva la barra laterale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../units/unit_3/01_assignment_03.html">Modulo 3</a></li><li class="breadcrumb-item"><a href="../../units/unit_3/02_ctt.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Teoria Classica dei Test</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Attiva/disattiva la barra laterale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Ricerca" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../">Laboratorio di Testing Psicologico</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/ccaudek/lab-test-psi/" title="Eseguire il codice" class="quarto-navigation-tool px-1" aria-label="Eseguire il codice"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Attiva/disattiva la modalità oscura"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Ricerca"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Benvenuti</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../prefazione.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Prefazione</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Programmazione</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Attiva/disattiva sezione">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../cal_lab_test_psi_2025.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Calendario degli incontri</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Modulo 1</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Attiva/disattiva sezione">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../units/unit_1/01_intro_r.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduzione a R e Quarto</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Modulo 2</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Attiva/disattiva sezione">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../units/unit_2/01_assignment_02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Esercitazioni Assegnate</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../units/unit_2/02_descriptive_stats.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Statistiche descrittive</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../units/unit_2/03_careless.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Careless responding</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../units/unit_2/hw1a.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">✏️ Distribuzione normale, asimmetria e curtosi</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../units/unit_2/hw1b.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">✏️ Statistiche descrittive a livello degli item</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../units/unit_2/hw2a.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">✏️ NIRT per gli item FAI</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Modulo 3</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Attiva/disattiva sezione">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../units/unit_3/01_assignment_03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Esercitazioni Assegnate</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../units/unit_3/02_ctt.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Teoria Classica dei Test</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Modulo 4</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Attiva/disattiva sezione">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../units/unit_4/01_assignment_04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">MSA</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../99-references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bibliografia</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Indice</h2>
+   
+  <ul>
+  <li><a href="#esercitazioni-assegnate" id="toc-esercitazioni-assegnate" class="nav-link active" data-scroll-target="#esercitazioni-assegnate"><span class="header-section-number">10.1</span> Esercitazioni Assegnate</a></li>
+  <li><a href="#a.-modello-di-regressione-lineare" id="toc-a.-modello-di-regressione-lineare" class="nav-link" data-scroll-target="#a.-modello-di-regressione-lineare"><span class="header-section-number">10.2</span> A. Modello di Regressione Lineare</a></li>
+  <li><a href="#b.-teoria-classica-dei-test" id="toc-b.-teoria-classica-dei-test" class="nav-link" data-scroll-target="#b.-teoria-classica-dei-test"><span class="header-section-number">10.3</span> B. Teoria Classica dei Test</a>
+  <ul>
+  <li><a href="#simulazione" id="toc-simulazione" class="nav-link" data-scroll-target="#simulazione"><span class="header-section-number">10.3.1</span> Simulazione</a></li>
+  <li><a href="#sem" id="toc-sem" class="nav-link" data-scroll-target="#sem"><span class="header-section-number">10.3.2</span> SEM</a></li>
+  <li><a href="#stima-del-punteggio-vero" id="toc-stima-del-punteggio-vero" class="nav-link" data-scroll-target="#stima-del-punteggio-vero"><span class="header-section-number">10.3.3</span> Stima del Punteggio Vero</a></li>
+  </ul></li>
+  <li><a href="#session-info" id="toc-session-info" class="nav-link" data-scroll-target="#session-info"><span class="header-section-number">10.4</span> Session Info</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.dev/ccaudek/lab-test-psi/blob/main/units/unit_3/02_ctt.ipynb" class="toc-action"><i class="bi bi-github"></i>Modifica questa pagina</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../units/unit_3/01_assignment_03.html">Modulo 3</a></li><li class="breadcrumb-item"><a href="../../units/unit_3/02_ctt.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Teoria Classica dei Test</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="sec-ctt" class="quarto-section-identifier"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Teoria Classica dei Test</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><strong>Prerequisiti</strong></p>
+<ul>
+<li>Leggere il capitolo 2, <em>Constructs</em>, e il capitolo 3, <em>Raliability</em>, di <span class="citation" data-cites="petersen2024principles">Petersen (<a href="../../99-references.html#ref-petersen2024principles" role="doc-biblioref">2024</a>)</span>.</li>
+</ul>
+<p><strong>Concetti e Competenze Chiave</strong></p>
+<p><strong>Preparazione del Notebook</strong></p>
+<div id="771d7c1a" class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="80">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Carica il file _common.R per impostazioni di pacchetti e opzioni</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"code"</span>, <span class="st">"_common.R"</span>) <span class="sc">|&gt;</span> <span class="fu">source</span>()</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>pacman<span class="sc">::</span><span class="fu">p_load</span>(psychometric)</span></code><button title="Copia negli appunti" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="esercitazioni-assegnate" class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="esercitazioni-assegnate"><span class="header-section-number">10.1</span> Esercitazioni Assegnate</h2>
+<ul>
+<li>A. Spiegare il modello di regressione lineare bivariato, spiegando sia la logica del calcolo dei coefficienti con il metodo dei minimi quadrati, sia l’interpretazione di parametri statistici come l’errore standard della regressione, la scomposizione della varianza e il calcolo del coefficiente di determinazione. Estendere quindi la discussione al modello alla regressione multipla e approfondendo l’interpretazione dei coefficienti parziali di regressione e il loro legame con i coefficienti parziali di correlazione.</li>
+<li>B. Spiegare i concetti principali della CTT con una simulazione.</li>
+<li>C. Calcolare le quantità della CTT per i dati FAI (attendibilità, SEM, stima del punteggio vero con il metodo di Kelley e relativo intervallo di fiducia).</li>
+<li>D. Presentare un esempio della recente letteratura psicologica in cui vengono usati (1) il SEM, e (2) la stima del punteggio vero.</li>
+<li>E. Presentare un esempio della recente letteratura psicologica in cui viene usato il Reliable Change Index (RCI) basato su SEM.</li>
+<li>F. Discutere i limiti della stima SEM della CTT.</li>
+</ul>
+</section>
+<section id="a.-modello-di-regressione-lineare" class="level2" data-number="10.2">
+<h2 data-number="10.2" class="anchored" data-anchor-id="a.-modello-di-regressione-lineare"><span class="header-section-number">10.2</span> A. Modello di Regressione Lineare</h2>
+</section>
+<section id="b.-teoria-classica-dei-test" class="level2" data-number="10.3">
+<h2 data-number="10.3" class="anchored" data-anchor-id="b.-teoria-classica-dei-test"><span class="header-section-number">10.3</span> B. Teoria Classica dei Test</h2>
+<section id="simulazione" class="level3" data-number="10.3.1">
+<h3 data-number="10.3.1" class="anchored" data-anchor-id="simulazione"><span class="header-section-number">10.3.1</span> Simulazione</h3>
+<p>Simuliamo i dati in modo da riprodurre le tre assunzioni della CTT:</p>
+<ul>
+<li><span class="math inline">\(\mathbb{E}(E) = 0\)</span></li>
+<li><span class="math inline">\(\rho_{TE} = 0\)</span></li>
+<li><span class="math inline">\(\rho_{E_i, E_j} = 0\)</span></li>
+</ul>
+<div id="e2902f54" class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="20">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">8394</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">100</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>Sigma <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">6</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">3</span>), <span class="at">byrow =</span> <span class="cn">TRUE</span>, <span class="at">ncol =</span> <span class="dv">2</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>mu <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">12</span>, <span class="dv">0</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">mvrnorm</span>(n, mu, Sigma, <span class="at">empirical =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>T <span class="ot">&lt;-</span> dat[, <span class="dv">1</span>]</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>E <span class="ot">&lt;-</span> dat[, <span class="dv">2</span>]</span></code><button title="Copia negli appunti" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Generiamo i punteggi osservati in base alla formula fondamentale della CTT:</p>
+<div id="c63a96fb" class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> T <span class="sc">+</span> E</span></code><button title="Copia negli appunti" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Inseriamo i dati simulati in un data frame:</p>
+<div id="814d9fcd" class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tibble</span>(X, T, E) <span class="sc">|&gt;</span> <span class="fu">head</span>()</span></code><button title="Copia negli appunti" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A tibble: 6 x 3</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">X</th>
+<th data-quarto-table-cell-role="th" scope="col">T</th>
+<th data-quarto-table-cell-role="th" scope="col">E</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>15.698623</td>
+<td>16.765359</td>
+<td>-1.0667358</td>
+</tr>
+<tr class="even">
+<td>13.657503</td>
+<td>12.248096</td>
+<td>1.4094073</td>
+</tr>
+<tr class="odd">
+<td>6.731979</td>
+<td>7.852136</td>
+<td>-1.1201563</td>
+</tr>
+<tr class="even">
+<td>14.621813</td>
+<td>14.233699</td>
+<td>0.3881133</td>
+</tr>
+<tr class="odd">
+<td>10.606647</td>
+<td>10.187035</td>
+<td>0.4196115</td>
+</tr>
+<tr class="even">
+<td>12.370288</td>
+<td>13.329971</td>
+<td>-0.9596831</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="aa03a361" class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tibble</span>(X, T) <span class="sc">|&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(T, X)) <span class="sc">+</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>(<span class="at">position =</span> <span class="fu">position_jitter</span>(<span class="at">w =</span> .<span class="dv">3</span>, <span class="at">h =</span> .<span class="dv">3</span>)) <span class="sc">+</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_abline</span>(<span class="at">col =</span> <span class="st">"blue"</span>)</span></code><button title="Copia negli appunti" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="02_ctt_files/figure-html/cell-6-output-1.png" width="480" height="296" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<div id="5ddec898" class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(T) <span class="sc">==</span> <span class="fu">mean</span>(X)</span></code><button title="Copia negli appunti" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+TRUE
+</div>
+</div>
+<div id="c2d647f8" class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(E) <span class="sc">|&gt;</span> <span class="fu">round</span>(<span class="dv">2</span>)</span></code><button title="Copia negli appunti" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+0
+</div>
+</div>
+<div id="639a5a4e" class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="24">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="fu">var</span>(T), <span class="fu">var</span>(X), <span class="fu">var</span>(E))</span></code><button title="Copia negli appunti" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class="list-inline"><li>6</li><li>9</li><li>3</li></ol>
+</div>
+</div>
+<div id="103e5030" class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="65">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">var</span>(T) <span class="sc">+</span> <span class="fu">var</span>(E) </span></code><button title="Copia negli appunti" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+9
+</div>
+</div>
+<div id="a5e3012a" class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="66">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">var</span>(X)</span></code><button title="Copia negli appunti" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+9
+</div>
+</div>
+<div id="60e64247" class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(E, T) <span class="sc">|&gt;</span> <span class="fu">round</span>(<span class="dv">2</span>)</span></code><button title="Copia negli appunti" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+0
+</div>
+</div>
+<div id="bd58dfd0" class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">density</span>(E))</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">curve</span>(<span class="fu">dnorm</span>(x, <span class="fu">mean</span>(E), <span class="fu">sd</span>(E)), <span class="at">add =</span> <span class="cn">TRUE</span>, <span class="at">col =</span> <span class="st">"red"</span>)</span></code><button title="Copia negli appunti" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="02_ctt_files/figure-html/cell-13-output-1.png" width="480" height="296" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Attendibilità:</p>
+<div id="b4d393d9" class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="70">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>rxx <span class="ot">&lt;-</span> <span class="fu">var</span>(T) <span class="sc">/</span> <span class="fu">var</span>(X)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>rxx</span></code><button title="Copia negli appunti" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+0.666666666666667
+</div>
+</div>
+<div id="f8a472fe" class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(T, X)<span class="sc">^</span><span class="dv">2</span></span></code><button title="Copia negli appunti" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+0.666666666666666
+</div>
+</div>
+<p>L’attendibilità, in maniera corrispondente, è il coefficiente di determinazione del modello lineare che spiega T in funzione di X:</p>
+<div id="04d33afa" class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="71">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>fm <span class="ot">&lt;-</span> <span class="fu">lm</span>(T <span class="sc">~</span> X)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>out <span class="ot">&lt;-</span> <span class="fu">summary</span>(fm)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>out<span class="sc">$</span>r.squared</span></code><button title="Copia negli appunti" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+0.666666666666667
+</div>
+</div>
+</section>
+<section id="sem" class="level3" data-number="10.3.2">
+<h3 data-number="10.3.2" class="anchored" data-anchor-id="sem"><span class="header-section-number">10.3.2</span> SEM</h3>
+<p>L’errore standard della misurazione</p>
+<div id="68f6100e" class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="76">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>SEM <span class="ot">&lt;-</span> <span class="fu">sd</span>(X) <span class="sc">*</span> <span class="fu">sqrt</span>(<span class="dv">1</span> <span class="sc">-</span> rxx)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>SEM <span class="sc">|&gt;</span> <span class="fu">round</span>(<span class="dv">3</span>)</span></code><button title="Copia negli appunti" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+1.732
+</div>
+</div>
+<p>è identico alla deviazione standard degli errori:</p>
+<div id="0604a47a" class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="77">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(<span class="dv">3</span>) <span class="sc">|&gt;</span> <span class="fu">round</span>(<span class="dv">3</span>)</span></code><button title="Copia negli appunti" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+1.732
+</div>
+</div>
+<div id="01ebf34c" class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="78">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(<span class="fu">var</span>(E)) <span class="sc">|&gt;</span> <span class="fu">round</span>(<span class="dv">3</span>)</span></code><button title="Copia negli appunti" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+1.732
+</div>
+</div>
+<div id="e8145a31" class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Import data </span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>df_tot <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"fai_2022_11_20.rds"</span>)</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Data wrangling </span></span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Careless responding</span></span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter for rows with FLAG == "keep" and remove the FLAG column</span></span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>temp <span class="ot">&lt;-</span> df_tot <span class="sc">|&gt;</span></span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>    dplyr<span class="sc">::</span><span class="fu">filter</span>(FLAG <span class="sc">==</span> <span class="st">"keep"</span>)</span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>temp<span class="sc">$</span>FLAG <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Descriptive statistics for the items </span></span>
+<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute skewness and kurtosis</span></span>
+<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a>items_stats <span class="ot">&lt;-</span> psych<span class="sc">::</span><span class="fu">describe</span>(temp)</span>
+<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-22"><a href="#cb19-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Identify items with high skewness or kurtosis (absolute values)</span></span>
+<span id="cb19-23"><a href="#cb19-23" aria-hidden="true" tabindex="-1"></a>items_skew_kurt_bad <span class="ot">&lt;-</span> <span class="fu">rownames</span>(items_stats)[<span class="fu">abs</span>(items_stats<span class="sc">$</span>skew) <span class="sc">&gt;</span> <span class="fl">2.5</span> <span class="sc">|</span> <span class="fu">abs</span>(items_stats<span class="sc">$</span>kurtosis) <span class="sc">&gt;</span> <span class="fl">7.5</span>]</span>
+<span id="cb19-24"><a href="#cb19-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-25"><a href="#cb19-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Remove NA values from items_skew_kurt_bad</span></span>
+<span id="cb19-26"><a href="#cb19-26" aria-hidden="true" tabindex="-1"></a>items_skew_kurt_bad <span class="ot">&lt;-</span> <span class="fu">na.omit</span>(items_skew_kurt_bad)</span>
+<span id="cb19-27"><a href="#cb19-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-28"><a href="#cb19-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Select columns excluding the problematic items</span></span>
+<span id="cb19-29"><a href="#cb19-29" aria-hidden="true" tabindex="-1"></a>df_clean <span class="ot">&lt;-</span> temp <span class="sc">%&gt;%</span></span>
+<span id="cb19-30"><a href="#cb19-30" aria-hidden="true" tabindex="-1"></a>    dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="sc">-</span>dplyr<span class="sc">::</span><span class="fu">all_of</span>(items_skew_kurt_bad))</span>
+<span id="cb19-31"><a href="#cb19-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-32"><a href="#cb19-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Check the number of removed items (columns)</span></span>
+<span id="cb19-33"><a href="#cb19-33" aria-hidden="true" tabindex="-1"></a>num_removed <span class="ot">&lt;-</span> <span class="fu">ncol</span>(temp) <span class="sc">-</span> <span class="fu">ncol</span>(df_clean)</span>
+<span id="cb19-34"><a href="#cb19-34" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Number of items removed:"</span>, num_removed)</span>
+<span id="cb19-35"><a href="#cb19-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-36"><a href="#cb19-36" aria-hidden="true" tabindex="-1"></a><span class="co"># Use only 4 items</span></span>
+<span id="cb19-37"><a href="#cb19-37" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df_clean <span class="sc">%&gt;%</span> </span>
+<span id="cb19-38"><a href="#cb19-38" aria-hidden="true" tabindex="-1"></a>    dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="st">"FAI_129"</span>, <span class="st">"FAI_133"</span>, <span class="st">"FAI_25"</span>, <span class="st">"FAI_103"</span>)</span>
+<span id="cb19-39"><a href="#cb19-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-40"><a href="#cb19-40" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>fai_a2 <span class="ot">&lt;-</span> df<span class="sc">$</span>FAI_129 <span class="sc">+</span> df<span class="sc">$</span>FAI_133 <span class="sc">+</span> df<span class="sc">$</span>FAI_25 <span class="sc">+</span> df<span class="sc">$</span>FAI_103</span></code><button title="Copia negli appunti" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Number of items removed: 27</code></pre>
+</div>
+</div>
+<div id="cfcb083f" class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(df<span class="sc">$</span>fai_a2)</span></code><button title="Copia negli appunti" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="02_ctt_files/figure-html/cell-21-output-1.png" width="480" height="296" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Metodi per stimare l’attendibilità: test paralleli, test-retest, split-half, consistenza interna.</p>
+<div id="c63d4b1f" class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="44">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>df[, <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>] <span class="sc">|&gt;</span> psych<span class="sc">::</span><span class="fu">alpha</span>()</span></code><button title="Copia negli appunti" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<pre><code>
+Reliability analysis   
+Call: psych::alpha(x = df[, 1:4])
+
+  raw_alpha std.alpha G6(smc) average_r S/N   ase mean  sd median_r
+      0.82      0.82    0.79      0.54 4.7 0.013  1.9 1.2     0.53
+
+    95% confidence boundaries 
+         lower alpha upper
+Feldt     0.79  0.82  0.85
+Duhachek  0.80  0.82  0.85
+
+ Reliability if an item is dropped:
+        raw_alpha std.alpha G6(smc) average_r S/N alpha se  var.r
+FAI_129      0.74      0.74    0.67      0.49 2.9    0.021 0.0073
+FAI_133      0.76      0.76    0.69      0.51 3.1    0.020 0.0095
+FAI_25       0.77      0.77    0.71      0.53 3.3    0.019 0.0184
+FAI_103      0.83      0.84    0.78      0.63 5.2    0.013 0.0021
+        med.r
+FAI_129  0.45
+FAI_133  0.46
+FAI_25   0.46
+FAI_103  0.62
+
+ Item statistics 
+          n raw.r std.r r.cor r.drop mean  sd
+FAI_129 453  0.86  0.85  0.81   0.73  2.1 1.4
+FAI_133 453  0.85  0.84  0.77   0.69  1.6 1.6
+FAI_25  453  0.81  0.82  0.74   0.67  2.4 1.3
+FAI_103 453  0.72  0.72  0.56   0.52  1.6 1.4
+
+Non missing response frequency for each item
+           0    1    2    3    4 miss
+FAI_129 0.13 0.33 0.13 0.16 0.25    0
+FAI_133 0.36 0.24 0.07 0.09 0.25    0
+FAI_25  0.06 0.24 0.23 0.20 0.28    0
+FAI_103 0.23 0.37 0.11 0.11 0.18    0</code></pre>
+</div>
+</div>
+<div id="db781cc5" class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="55">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>rxx <span class="ot">&lt;-</span> <span class="fl">0.82</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(df<span class="sc">$</span>fai_a2) <span class="sc">*</span> <span class="fu">sqrt</span>(<span class="dv">1</span> <span class="sc">-</span> rxx)</span></code><button title="Copia negli appunti" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+1.96673725789664
+</div>
+</div>
+<div id="be2abdcc" class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="60">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">density</span>(df<span class="sc">$</span>fai_a2))</span></code><button title="Copia negli appunti" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="02_ctt_files/figure-html/cell-24-output-1.png" width="480" height="296" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="stima-del-punteggio-vero" class="level3" data-number="10.3.3">
+<h3 data-number="10.3.3" class="anchored" data-anchor-id="stima-del-punteggio-vero"><span class="header-section-number">10.3.3</span> Stima del Punteggio Vero</h3>
+<p><span class="math inline">\(\hat{T} = \bar{X} + r_{xx} (X - \bar{X})\)</span></p>
+<p>Consideriemo il punteggio di 10 sulla sottoscale FAI-2. La stima del punteggio vero diventa:</p>
+<div id="46af15b2" class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="83">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(df<span class="sc">$</span>fai_a2) <span class="sc">+</span> <span class="fl">0.82</span> <span class="sc">*</span> (<span class="dv">10</span> <span class="sc">-</span> <span class="fu">mean</span>(df<span class="sc">$</span>fai_a2))</span></code><button title="Copia negli appunti" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+9.58794701986755
+</div>
+</div>
+<p><span class="math inline">\(\sigma_{\hat{T}} = \sigma_X\sqrt{r_{xx'}(1 - r_{xx'})}\)</span></p>
+<p>Calcoliamo l’errore standard della stima del punteggio vero:</p>
+<div id="a7faec4a" class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="91">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(df<span class="sc">$</span>fai_a2) <span class="sc">*</span> <span class="fu">sqrt</span>(<span class="fl">0.82</span> <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> <span class="fl">0.82</span>))</span></code><button title="Copia negli appunti" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+1.78095633357783
+</div>
+</div>
+<div id="4bf411b6" class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="92">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>?CI.tscore</span></code><button title="Copia negli appunti" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>CI.tscore             package:psychometric             R Documentation
+
+_C_o_n_f_i_d_e_n_c_e _I_n_t_e_r_v_a_l_s _f_o_r _T_e_s_t _S_c_o_r_e_s
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Computes the CI for a desired level for observed scores and
+     estimated true scores
+
+_U_s_a_g_e:
+
+     CI.tscore(obs, mx, s, rxx, level = 0.95)
+     
+     CI.obs(obs, s, rxx, level = 0.95)
+     
+_A_r_g_u_m_e_n_t_s:
+
+     obs: Observed test score on test x
+
+      mx: mean of test x
+
+       s: standard deviation of test x
+
+     rxx: reliability of test x
+
+   level: Significance Level for constructing the CI, default is .95
+
+_D_e_t_a_i_l_s:
+
+     'CI.tscore' makes use of 'Est.true' to correct the observed score
+     for regression to the mean and 'SE.Est' for the correct standard
+     error. 'CI.tscore' also requires entry of the mean of the test
+     scores for correcting for regression to the mean.
+     'CI.obs' is much simpler in construction as it only makes use of
+     the observed score without any corrections. 'CI.obs' uses
+     'SE.Meas', the SEM that appears in most test manuals and text
+     books.
+
+_V_a_l_u_e:
+
+     Both functions return a table with 4 elements
+
+     SE.: Standard Error of the Estimate or SE of Measurement
+
+     LCL: lower confidence limit of the CIDescription of 'comp2'
+
+ T.Score: (or OBS) Estimate True Score or Observed score
+
+     UCL: upper confidence limit of the CI
+
+_W_a_r_n_i_n_g:
+
+     Be Cautious in construction and interpretation of CIs
+     To obtain percent for 1 SEM
+     1-((1-pnorm(1))*2)
+     To obtain percent for 2 SEM
+     1-((1-pnorm(2))*2)
+     95 percent CI corresponds to 1.96 * SE
+     1 * SE corresponds to .6827
+     2 * SE corresponds to 0.9772499
+     so, for two-sided, 2 * SE corresponds to 0.9544997
+
+_N_o_t_e:
+
+     It is not in error to report any one of these. The
+     misinterpretation is in taking the observed score and making
+     inferences about the true score without (1) using the correct
+     standard error and (2) correcting for regression toward the mean
+     of the observed scores.
+
+_A_u_t_h_o_r(_s):
+
+     Thomas D. Fletcher &lt;mailto:t.d.fletcher05@gmail.com&gt;
+
+_R_e_f_e_r_e_n_c_e_s:
+
+     Dudek, F. J. (1979). The continuing misinterpretation of the
+     standard error of measurement.  _Psychological Bulletin, 86_,
+     335-337.
+
+_S_e_e _A_l_s_o:
+
+     'SE.Meas'
+
+_E_x_a_m_p_l_e_s:
+
+     # Examples from Dudek (1979)
+     # Suppose a test has mean = 500, SD = 100 rxx = .9
+     # If an individual scores 700 on the test
+     CI.tscore (700, 500, 100, .9, level=.68)
+     CI.obs(700, 100,.9, level=.68)
+     </code></pre>
+</div>
+</div>
+<div id="8de9ae0a" class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="93">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">CI.tscore</span>(<span class="dv">10</span>, <span class="fu">mean</span>(df<span class="sc">$</span>fai_a2), <span class="fu">sd</span>(df<span class="sc">$</span>fai_a2), <span class="fl">0.82</span>, <span class="at">level =</span> <span class="fl">0.95</span>)</span></code><button title="Copia negli appunti" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A data.frame: 1 x 4</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">SE.Est</th>
+<th data-quarto-table-cell-role="th" scope="col">LCL</th>
+<th data-quarto-table-cell-role="th" scope="col">T.Score</th>
+<th data-quarto-table-cell-role="th" scope="col">UCL</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1.780956</td>
+<td>6.097337</td>
+<td>9.587947</td>
+<td>13.07856</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+</section>
+<section id="session-info" class="level2" data-number="10.4">
+<h2 data-number="10.4" class="anchored" data-anchor-id="session-info"><span class="header-section-number">10.4</span> Session Info</h2>
+<div id="c8d16429" class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="51">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copia negli appunti" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<pre><code>R version 4.4.1 (2024-06-14)
+Platform: aarch64-apple-darwin20
+Running under: macOS 15.0.1
+
+Matrix products: default
+BLAS:   /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRblas.0.dylib 
+LAPACK: /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.0
+
+locale:
+[1] C
+
+time zone: Europe/Rome
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods  
+[7] base     
+
+other attached packages:
+ [1] lavaanExtra_0.2.1 lavaanPlot_0.8.1  kableExtra_1.4.0 
+ [4] corrplot_0.94     nortest_1.0-4     MASS_7.3-61      
+ [7] ggokabeito_0.1.0  viridis_0.6.5     viridisLite_0.4.2
+[10] ggpubr_0.6.0      ggExtra_0.10.1    gridExtra_2.3    
+[13] patchwork_1.3.0   bayesplot_1.11.1  semTools_0.5-6   
+[16] semPlot_1.1.6     lavaan_0.6-19     psych_2.4.6.26   
+[19] scales_1.3.0      markdown_1.13     knitr_1.48       
+[22] lubridate_1.9.3   forcats_1.0.0     stringr_1.5.1    
+[25] dplyr_1.1.4       purrr_1.0.2       readr_2.1.5      
+[28] tidyr_1.3.1       tibble_3.2.1      ggplot2_3.5.1    
+[31] tidyverse_2.0.0   here_1.0.1       
+
+loaded via a namespace (and not attached):
+  [1] RColorBrewer_1.1-3  rstudioapi_0.16.0   jsonlite_1.8.9     
+  [4] magrittr_2.0.3      TH.data_1.1-2       estimability_1.5.1 
+  [7] farver_2.1.2        nloptr_2.1.1        rmarkdown_2.28     
+ [10] vctrs_0.6.5         Cairo_1.6-2         minqa_1.2.8        
+ [13] base64enc_0.1-3     rstatix_0.7.2       htmltools_0.5.8.1  
+ [16] broom_1.0.7         Formula_1.2-5       htmlwidgets_1.6.4  
+ [19] plyr_1.8.9          sandwich_3.1-1      emmeans_1.10.4     
+ [22] zoo_1.8-12          uuid_1.2-1          igraph_2.0.3       
+ [25] mime_0.12           lifecycle_1.0.4     pkgconfig_2.0.3    
+ [28] Matrix_1.7-0        R6_2.5.1            fastmap_1.2.0      
+ [31] shiny_1.9.1         numDeriv_2016.8-1.1 digest_0.6.37      
+ [34] OpenMx_2.21.12      fdrtool_1.2.18      colorspace_2.1-1   
+ [37] rprojroot_2.0.4     Hmisc_5.1-3         labeling_0.4.3     
+ [40] fansi_1.0.6         timechange_0.3.0    abind_1.4-8        
+ [43] compiler_4.4.1      withr_3.0.1         glasso_1.11        
+ [46] htmlTable_2.4.3     backports_1.5.0     carData_3.0-5      
+ [49] ggsignif_0.6.4      corpcor_1.6.10      gtools_3.9.5       
+ [52] tools_4.4.1         pbivnorm_0.6.0      foreign_0.8-87     
+ [55] zip_2.3.1           httpuv_1.6.15       nnet_7.3-19        
+ [58] glue_1.8.0          quadprog_1.5-8      DiagrammeR_1.0.11  
+ [61] promises_1.3.0      nlme_3.1-166        lisrelToR_0.3      
+ [64] grid_4.4.1          pbdZMQ_0.3-13       checkmate_2.3.2    
+ [67] cluster_2.1.6       reshape2_1.4.4      generics_0.1.3     
+ [70] gtable_0.3.5        tzdb_0.4.0          data.table_1.16.0  
+ [73] hms_1.1.3           xml2_1.3.6          car_3.1-3          
+ [76] utf8_1.2.4          sem_3.1-16          pillar_1.9.0       
+ [79] IRdisplay_1.1       rockchalk_1.8.157   later_1.3.2        
+ [82] splines_4.4.1       lattice_0.22-6      survival_3.7-0     
+ [85] kutils_1.73         tidyselect_1.2.1    miniUI_0.1.1.1     
+ [88] pbapply_1.7-2       svglite_2.1.3       stats4_4.4.1       
+ [91] xfun_0.48           qgraph_1.9.8        arm_1.14-4         
+ [94] visNetwork_2.1.2    stringi_1.8.4       pacman_0.5.1       
+ [97] boot_1.3-31         evaluate_1.0.0      codetools_0.2-20   
+[100] mi_1.1              cli_3.6.3           RcppParallel_5.1.9 
+[103] IRkernel_1.3.2      rpart_4.1.23        systemfonts_1.1.0  
+[106] xtable_1.8-4        repr_1.1.7          munsell_0.5.1      
+[109] Rcpp_1.0.13         coda_0.19-4.1       png_0.1-8          
+[112] XML_3.99-0.17       parallel_4.4.1      jpeg_0.1-10        
+[115] lme4_1.1-35.5       mvtnorm_1.3-1       openxlsx_4.2.7.1   
+[118] crayon_1.5.3        rlang_1.1.4         multcomp_1.4-26    
+[121] mnormt_2.1.1       </code></pre>
+</div>
+</div>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-petersen2024principles" class="csl-entry" role="listitem">
+Petersen, Isaac T. 2024. <em>Principles of psychological assessment: With applied examples in R</em>. CRC Press.
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copiato!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copiato!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/ccaudek\.github\.io\/lab-test-psi\/intro\.html");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../units/unit_3/01_assignment_03.html" class="pagination-link" aria-label="Esercitazioni Assegnate">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Esercitazioni Assegnate</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../units/unit_4/01_assignment_04.html" class="pagination-link" aria-label="MSA">
+        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">MSA</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Laboratorio di Testing Psicologico è stato scritto da Corrado Caudek.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.dev/ccaudek/lab-test-psi/blob/main/units/unit_3/02_ctt.ipynb" class="toc-action"><i class="bi bi-github"></i>Modifica questa pagina</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>Questo libro è stato realizzato con <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
